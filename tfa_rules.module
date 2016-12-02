@@ -25,6 +25,8 @@ function tfa_rules_rules_condition_info() {
  * Condition: User has TFA.
  */
 function tfa_rules_condition_user_has_tfa($account) {
-  $tfa = tfa_get_process($account);
-  return $tfa->ready();
+  $tfa_data = tfa_basic_get_tfa_data($account);
+  $status = isset($tfa_data['status']) && $tfa_data['status'] ? TRUE : FALSE;
+
+  return $status;
 }
