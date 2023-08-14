@@ -10,7 +10,7 @@
 function tfa_rules_default_rules_configuration() {
   $items = array();
 
-  $items['rules_tfa_user_login_redirect_setup'] = entity_import('rules_config', '{ "rules_tfa_user_login_redirect_setup" : {
+  $items['rules_tfa_user_login_redirect_setup'] = entity_plus_import('rules_config', '{ "rules_tfa_user_login_redirect_setup" : {
     "LABEL" : "User redirect to TFA setup on login",
     "PLUGIN" : "reaction rule",
     "OWNER" : "rules",
